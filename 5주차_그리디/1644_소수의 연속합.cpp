@@ -7,7 +7,7 @@ int main(){
 	scanf("%d", &n); 
     for(int i=2; i<=n; i++){
 		if(che[i]) continue;
-		for(int j=2*i; j<=n; j+=i){
+		for(int j=2*i; j<=n; j+=i){ // 배수를 찾아내서 지움  
 			che[j] = 1;
 		}
 	}
