@@ -32,7 +32,7 @@ void rotate_(int y, int x, int first){
 }
 
 void go(int y, int x, int c){
-	// 센터 y,x에서 얼마나 떨어져 있는지  
+	// 센터 y,x에서 얼마나 떨어져 있는지  꼭지점 2개 찾기  
 	for(int i=1; i<=c; i++){
 		sy = y - 1 * i; 
 		sx = x - 1 * i; 
@@ -45,8 +45,8 @@ void go(int y, int x, int c){
 		vector<int> turn; // 좌표값 기반으로 실제 값 저장  
 		for(auto c: vvv) turn.push_back(b[c.first][c.second]);
 		rotate(turn.rbegin(),turn.rbegin()+1, turn.rend());
-		for(int i = 0; i < vvv.size(); i++) cout << turn[i] << " "; 
-		cout << "\n";
+		//for(int i = 0; i < vvv.size(); i++) cout << turn[i] << " "; 
+		//cout << "\n";
 		for(int i = 0; i < vvv.size(); i++) b[vvv[i].first][vvv[i].second] = turn[i]; 
 	}
 }
